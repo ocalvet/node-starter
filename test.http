@@ -1,1 +1,1 @@
-GET http://localhost:6000/api/users
+GET http://localhost:6066/api/users
