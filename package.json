@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/ocalvet/node-starter/issues"
   },
-  "homepage": "https://github.com/ocalvet/node-starter#readme"
+  "homepage": "https://github.com/ocalvet/node-starter#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4"
+  }
 }
