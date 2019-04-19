@@ -1,3 +1,5 @@
+const UnknownError = require('../errors').UnknownError;
+
 module.exports = class UsersService {
   findOne(id) {
     return {
@@ -12,6 +14,7 @@ module.exports = class UsersService {
     return { ...user, id: 11 };
   }
   update(id, user) {
+    throw new UnknownError('Testing errors!!!');
     return { ...user, id };
   }
   delete(id) {
