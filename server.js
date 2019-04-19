@@ -1,11 +1,11 @@
 const app = require('express')();
 const env = require('dotenv');
 const userController = require('./controllers/users');
-const bodyParser = require('body-parser');
+const middleware = require('./utils/middleware');
 env.config();
 const port = process.env.APP_PORT || 6000;
 // Middleware
-app.use(bodyParser.json());
+middleware(app);
 
 app.use('/api/users', userController);
 
