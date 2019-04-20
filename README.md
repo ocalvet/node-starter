@@ -1,5 +1,7 @@
 # [Title]
 
+This NodeJS starter project is a collection of best practices. It enables the user to copy and use the source within this repo as a starting point when builiding NodeJS apis.
+
 ## Setup
 
 1. Install dependencies `$ npm install`
