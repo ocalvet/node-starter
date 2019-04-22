@@ -46,3 +46,11 @@ describe('users.update', () => {
     expect(() => users.update()).toThrow('Testing errors!!!');
   });
 });
+
+describe('users.delete', () => {
+  const users = new UsersController();
+  it('returns the id of the deleted user', () => {
+    const deletedId = users.delete('123456');
+    expect(deletedId).toEqual('123456');
+  });
+});
