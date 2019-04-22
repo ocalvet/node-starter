@@ -27,3 +27,14 @@ describe('users.findAll', () => {
     ]);
   });
 });
+
+describe('users.create', () => {
+  const users = new UsersController();
+  it('returns the created user with an id of 11', () => {
+    const createdUser = users.create({ name: 'test user' });
+    expect(createdUser).toEqual({
+      id: 11,
+      name: 'test user'
+    });
+  });
+});
