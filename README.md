@@ -20,3 +20,7 @@ This NodeJS starter project is a collection of best practices. It enables the us
 | POST   | /api/users/    | `{ "name": "New Name" }`    |
 | PUT    | /api/users/:id | `{ "name": "Update Name" }` |
 | DELETE | /api/users/:id | -                           |
+
+## Tests
+
+1. To run test `$ npm test`
