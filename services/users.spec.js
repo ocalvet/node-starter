@@ -1,5 +1,5 @@
 const UsersController = require('./users');
-const ModelNotFoundError = require('../errors').ModelNotFoundError;
+const { ModelNotFoundError, UnknownError } = require('../errors');
 
 describe('users.findOne', function() {
   const users = new UsersController();
@@ -36,5 +36,13 @@ describe('users.create', () => {
       id: 11,
       name: 'test user'
     });
+  });
+});
+
+describe('users.update', () => {
+  const users = new UsersController();
+  it('throws an unknown error with the message ""', () => {
+    expect(() => users.update()).toThrow(UnknownError);
+    expect(() => users.update()).toThrow('Testing errors!!!');
   });
 });
