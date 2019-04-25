@@ -24,3 +24,12 @@ This NodeJS starter project is a collection of best practices. It enables the us
 ## Tests
 
 1. To run test `$ npm test`
+
+## Features
+
+1. Separation of concerns within the app (See file structure)
+2. Clean entry point (See server.js)
+3. Use of environment for configuration
+4. Sample tests
+5. Sample custom middleware
+6. Sample error handling
