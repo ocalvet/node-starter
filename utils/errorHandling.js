@@ -1,8 +1,8 @@
-const chalk = require('chalk');
-const UnknownError = require('../errors').UnknownError;
-const ModelNotFoundError = require('../errors').ModelNotFoundError;
+import chalk from 'chalk';
+import UnknownError from '../errors/UnknownError';
+import ModelNotFoundError from '../errors/ModelNotFoundError';
 
-const errorLogger = (err, req, res, next) => {
+export function errorLogger(err, req, res, next) {
   if (err.message) {
     console.log(chalk.default.red(err.message));
   }
@@ -12,14 +12,14 @@ const errorLogger = (err, req, res, next) => {
   next(err);
 };
 
-const unknownErrorLogger = (err, req, res, next) => {
+export function unknownErrorLogger(err, req, res, next) {
   if (err instanceof UnknownError) {
     return res.sendStatus(400);
   }
   next();
 };
 
-const modelNotFoundErrorLogger = (err, req, res, next) => {
+export function modelNotFoundErrorLogger(err, req, res, next) {
   if (err instanceof ModelNotFoundError) {
     res.status(400);
     return res.send({ error: 'Model not found' });
@@ -27,12 +27,12 @@ const modelNotFoundErrorLogger = (err, req, res, next) => {
   next();
 };
 
-const genericErrorLogger = (err, req, res, next) => {
+export function genericErrorLogger(err, req, res, next) {
   res.sendStatus(500);
   next();
 };
 
-module.exports = app => {
+export default app => {
   app.use([
     errorLogger,
     unknownErrorLogger,
@@ -40,3 +40,5 @@ module.exports = app => {
     genericErrorLogger
   ]);
 };
+
+

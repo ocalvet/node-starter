@@ -1,4 +1,4 @@
-module.exports = class UnknownError {
+export default class UnknownError {
   constructor(message) {
     this.message = message;
   }
