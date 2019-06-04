@@ -7,9 +7,15 @@ This NodeJS starter project is a collection of best practices. It enables the us
 1. Install dependencies `$ npm install`
 2. Copy .env.example into .env and update values
 
+## How to build with babel
+
+1. Run `$ npm build` this will transpile with Babel and output to build/Release
+
+
 ## How to run
 
-1. Run `$ npm start`
+1. Run `$ npm startd` this will run via babel-node on source
+2. Run `$ npm start` this will run from the build/Release folder
 
 ## Routes
 
@@ -33,3 +39,4 @@ This NodeJS starter project is a collection of best practices. It enables the us
 4. Sample tests
 5. Sample custom middleware
 6. Sample error handling
+7. ES6 - Babel transpiling

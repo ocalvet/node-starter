@@ -1,25 +1,20 @@
-const UnknownError = require('../errors').UnknownError;
-const ModelNotFoundError = require('../errors').ModelNotFoundError;
+import UnknownError from '../errors/UnknownError';
+import ModelNotFoundError from '../errors/ModelNotFoundError';
 
-module.exports = class UsersService {
-  findOne(id) {
+export function findOne(id) {
     throw new ModelNotFoundError('Error');
-    return {
-      id,
-      name: 'test'
-    };
-  }
-  findAll() {
+  };
+export function findAll() {
     return [{ id: 1, name: 'test' }, { id: 2, name: 'second' }];
-  }
-  create(user) {
+  };
+export function create(user) {
     return { ...user, id: 11 };
-  }
-  update(id, user) {
+  };
+export function update(id, user) {
     throw new UnknownError('Testing errors!!!');
-    return { ...user, id };
-  }
-  delete(id) {
+  };
+
+export function deleteData(id) {
     return id;
-  }
-};
+  };
+
